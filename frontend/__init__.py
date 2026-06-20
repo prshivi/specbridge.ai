@@ -1,0 +1,2 @@
+"""SpecBridge AI frontend package."""
+
