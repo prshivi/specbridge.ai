@@ -107,4 +107,3 @@ pytest
 6. Generate engineering artifacts through pluggable exporters.
 7. Add evaluation, observability, access control, and audit trails.
 8. Evolve the frontend into a guided specification workspace.
-
