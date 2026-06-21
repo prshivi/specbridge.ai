@@ -1,0 +1,5 @@
+SpecBridge Sample Requirements
+
+The platform must accept business requirement documents.
+Uploaded files must be validated before storage.
+

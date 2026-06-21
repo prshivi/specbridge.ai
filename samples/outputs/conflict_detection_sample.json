@@ -1,0 +1,35 @@
+{
+  "document_id": "11111111-1111-1111-1111-111111111111",
+  "conflicts": [
+    {
+      "conflict_id": "CON-001",
+      "title": "Contradictory refund policy",
+      "conflict_type": "business_rule_vs_business_rule",
+      "description": "One rule permits refunds during a seven-day window while another prohibits all refunds.",
+      "severity": "critical",
+      "confidence": 0.99,
+      "involved_requirement_ids": [],
+      "involved_business_rule_ids": ["BR-001", "BR-002"],
+      "evidence_texts": [
+        "Customers may request a refund within 7 days.",
+        "Refunds are not allowed."
+      ],
+      "source_chunk_ids": [
+        "11111111-1111-1111-1111-111111111111:7",
+        "11111111-1111-1111-1111-111111111111:8"
+      ],
+      "source_sections": ["4.1", "4.2"],
+      "why_it_matters": "The implementation cannot enforce both refund outcomes.",
+      "recommended_resolution_question": "Are refunds prohibited entirely, or allowed within seven days?",
+      "recommended_stakeholder": "product",
+      "blocking_for_development": true
+    }
+  ],
+  "cached": false,
+  "model": "gpt-5.5",
+  "agent_version": "1",
+  "source_fingerprint": "example-conflict-source-fingerprint",
+  "execution_time_ms": 1184.6,
+  "analyzed_at": "2026-06-21T00:00:00Z",
+  "knowledge_graph_updated": true
+}

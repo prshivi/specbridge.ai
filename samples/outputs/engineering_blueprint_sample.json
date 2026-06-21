@@ -1,0 +1,125 @@
+{
+  "document_id": "11111111-1111-1111-1111-111111111111",
+  "requirement_blueprints": [
+    {
+      "requirement_id": "INT-001",
+      "requirement_title": "Send validated account details",
+      "artifacts": [
+        {
+          "artifact_id": "ENG-SUM-001",
+          "requirement_id": "INT-001",
+          "artifact_type": "engineering_summary",
+          "title": "Provider handoff summary",
+          "description": "The system sends validated account details to Email Provider.",
+          "provenance": "document_backed",
+          "confidence": 0.96,
+          "evidence_text": "The registration workflow sends validated account details to Email Provider.",
+          "suggestion_reason": null,
+          "source_chunk_ids": [
+            "11111111-1111-1111-1111-111111111111:9"
+          ],
+          "source_sections": ["3.1"],
+          "related_assumption_ids": [],
+          "related_ambiguity_ids": [],
+          "related_conflict_ids": [],
+          "related_missing_requirement_ids": [],
+          "traceability_score": 1.0,
+          "payload": {
+            "kind": "engineering_summary",
+            "summary": "Transmit validated account details to Email Provider."
+          }
+        },
+        {
+          "artifact_id": "US-001",
+          "requirement_id": "INT-001",
+          "artifact_type": "user_story",
+          "title": "Complete the provider handoff",
+          "description": "Engineering-oriented user story for the provider handoff.",
+          "provenance": "ai_suggestion",
+          "confidence": 0.84,
+          "evidence_text": null,
+          "suggestion_reason": "Organizes the explicit workflow behavior as a testable delivery unit.",
+          "source_chunk_ids": [
+            "11111111-1111-1111-1111-111111111111:9"
+          ],
+          "source_sections": ["3.1"],
+          "related_assumption_ids": [],
+          "related_ambiguity_ids": [],
+          "related_conflict_ids": [],
+          "related_missing_requirement_ids": [],
+          "traceability_score": 0.85,
+          "payload": {
+            "kind": "user_story",
+            "actor": "Registration workflow participant",
+            "goal": "send validated account details",
+            "benefit": "the external notification step can complete",
+            "story": "As a registration workflow participant, I want validated account details sent so that the external notification step can complete."
+          }
+        },
+        {
+          "artifact_id": "AC-001",
+          "requirement_id": "INT-001",
+          "artifact_type": "acceptance_criterion",
+          "title": "Send validated details",
+          "description": "Measurable completion criterion for the provider handoff.",
+          "provenance": "ai_suggestion",
+          "confidence": 0.86,
+          "evidence_text": null,
+          "suggestion_reason": "Expresses the explicit workflow behavior in testable form.",
+          "source_chunk_ids": [
+            "11111111-1111-1111-1111-111111111111:9"
+          ],
+          "source_sections": ["3.1"],
+          "related_assumption_ids": [],
+          "related_ambiguity_ids": [],
+          "related_conflict_ids": [],
+          "related_missing_requirement_ids": [],
+          "traceability_score": 0.85,
+          "payload": {
+            "kind": "acceptance_criterion",
+            "given": "Validated account details are available",
+            "when": "The registration integration step executes",
+            "then": "The details are sent to Email Provider",
+            "measurable_outcome": "One provider request is recorded for the workflow step."
+          }
+        },
+        {
+          "artifact_id": "Q-001",
+          "requirement_id": "INT-001",
+          "artifact_type": "open_question",
+          "title": "Provider failure behavior",
+          "description": "Needs clarification: provider failure and retry behavior is undefined.",
+          "provenance": "needs_clarification",
+          "confidence": 0.7,
+          "evidence_text": null,
+          "suggestion_reason": null,
+          "source_chunk_ids": [
+            "11111111-1111-1111-1111-111111111111:9"
+          ],
+          "source_sections": ["3.1"],
+          "related_assumption_ids": [],
+          "related_ambiguity_ids": ["AMB-001"],
+          "related_conflict_ids": [],
+          "related_missing_requirement_ids": ["MISS-001"],
+          "traceability_score": 0.6,
+          "payload": {
+            "kind": "open_question",
+            "missing_information": "Provider failure and retry behavior",
+            "question": "What should happen when Email Provider is unavailable?",
+            "recommended_stakeholder": "product"
+          }
+        }
+      ]
+    }
+  ],
+  "total_requirements": 1,
+  "total_artifacts": 4,
+  "clarification_artifacts": 1,
+  "cached": false,
+  "model": "gpt-5.5",
+  "agent_version": "1",
+  "source_fingerprint": "example-engineering-blueprint-fingerprint",
+  "execution_time_ms": 1428.6,
+  "generated_at": "2026-06-21T00:00:00Z",
+  "knowledge_graph_updated": true
+}

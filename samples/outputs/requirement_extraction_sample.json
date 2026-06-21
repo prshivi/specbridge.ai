@@ -1,0 +1,44 @@
+{
+  "document_id": "11111111-1111-1111-1111-111111111111",
+  "requirements": [
+    {
+      "requirement_id": "FR-001",
+      "title": "Validate customer email",
+      "description": "The platform must validate the customer's email address before account creation.",
+      "category": "validation_rule",
+      "priority": "unspecified",
+      "confidence": 0.98,
+      "source_chunk_ids": [
+        "11111111-1111-1111-1111-111111111111:4"
+      ],
+      "source_section": "2.1",
+      "evidence_text": "The platform must validate the customer's email address before creating an account.",
+      "explicit_or_inferred": "explicit",
+      "ambiguity_flag": false,
+      "missing_info_flag": false
+    },
+    {
+      "requirement_id": "PERM-001",
+      "title": "Restrict account deactivation",
+      "description": "Account deactivation is restricted to administrators.",
+      "category": "permission_access",
+      "priority": "unspecified",
+      "confidence": 0.96,
+      "source_chunk_ids": [
+        "11111111-1111-1111-1111-111111111111:4"
+      ],
+      "source_section": "2.1",
+      "evidence_text": "Only administrators may deactivate an account.",
+      "explicit_or_inferred": "explicit",
+      "ambiguity_flag": false,
+      "missing_info_flag": false
+    }
+  ],
+  "cached": false,
+  "model": "gpt-5.5",
+  "agent_version": "1",
+  "source_fingerprint": "example-requirement-source-fingerprint",
+  "execution_time_ms": 965.2,
+  "extracted_at": "2026-06-21T00:00:00Z",
+  "knowledge_graph_updated": true
+}

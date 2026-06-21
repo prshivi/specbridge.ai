@@ -14,10 +14,17 @@ venv/
 
 # Environment and local state
 .env
-.streamlit/
+.streamlit/*
+!.streamlit/config.toml
+data/uploads/*
+!data/uploads/.gitkeep
+data/chroma/*
+!data/chroma/.gitkeep
+data/*.db
+data/*.db-shm
+data/*.db-wal
 
 # Editors and operating systems
 .idea/
 .vscode/
 .DS_Store
-

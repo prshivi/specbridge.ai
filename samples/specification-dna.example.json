@@ -1,0 +1,50 @@
+{
+  "document_id": "11111111-1111-1111-1111-111111111111",
+  "specification_dna": {
+    "project_name": {
+      "value": "Account Bridge",
+      "confidence": 0.98,
+      "source_chunk_ids": ["11111111-1111-1111-1111-111111111111:1"],
+      "source_document_sections": ["1"]
+    },
+    "project_summary": {
+      "value": "A customer account registration platform.",
+      "confidence": 0.94,
+      "source_chunk_ids": ["11111111-1111-1111-1111-111111111111:1"],
+      "source_document_sections": ["1"]
+    },
+    "business_objectives": [
+      {
+        "value": "Reduce manual account creation.",
+        "confidence": 0.96,
+        "source_chunk_ids": ["11111111-1111-1111-1111-111111111111:1"],
+        "source_document_sections": ["1"]
+      }
+    ],
+    "actors": [
+      {
+        "name": "Customer",
+        "description": "Submits registration details.",
+        "actor_type": "human",
+        "confidence": 0.98,
+        "source_chunk_ids": ["11111111-1111-1111-1111-111111111111:1"],
+        "source_document_sections": ["1"]
+      }
+    ],
+    "user_personas": [],
+    "modules": [],
+    "workflows": [],
+    "integrations": [],
+    "business_rules": [],
+    "constraints": [],
+    "explicit_assumptions": [],
+    "glossary": [],
+    "key_terminology": []
+  },
+  "cached": false,
+  "model": "gpt-5.5",
+  "agent_version": "2",
+  "source_fingerprint": "example-source-fingerprint",
+  "execution_time_ms": 842.4,
+  "generated_at": "2026-06-21T00:00:00Z"
+}

@@ -1,0 +1,123 @@
+{
+  "document_id": "11111111-1111-1111-1111-111111111111",
+  "architecture": {
+    "summary": "Use a modular monolith with an explicit external integration boundary and revisit service extraction only when independent scaling or fault-isolation requirements emerge.",
+    "recommended_style": "modular_monolith",
+    "recommendations": [
+      {
+        "recommendation_id": "ARCH-STYLE-001",
+        "recommendation_type": "high_level_architecture",
+        "title": "Modular monolith",
+        "recommendation": "Use a modular monolith with a separately defined provider adapter boundary.",
+        "confidence": 0.84,
+        "reason": "The Engineering Blueprint describes one cohesive workflow and one external integration without independent scaling requirements.",
+        "provenance": "ai_recommendation",
+        "evidence_text": null,
+        "related_requirement_ids": ["INT-001"],
+        "related_artifact_ids": ["ENG-SUM-001", "TASK-INT-001"],
+        "related_assumption_ids": [],
+        "source_chunk_ids": [
+          "11111111-1111-1111-1111-111111111111:9"
+        ],
+        "source_sections": ["3.1"],
+        "traceability_score": 0.85,
+        "details": {
+          "style": "modular_monolith",
+          "rejected_styles": ["microservices", "serverless"],
+          "evolution_trigger": "Independent scaling, fault isolation, or release ownership becomes an explicit requirement."
+        }
+      },
+      {
+        "recommendation_id": "ARCH-MOD-001",
+        "recommendation_type": "module",
+        "title": "Registration Integration module",
+        "recommendation": "Create a logical module for coordinating validated account-detail delivery.",
+        "confidence": 0.88,
+        "reason": "The workflow and engineering artifacts describe a cohesive provider handoff responsibility.",
+        "provenance": "ai_recommendation",
+        "evidence_text": null,
+        "related_requirement_ids": ["INT-001"],
+        "related_artifact_ids": ["ENG-SUM-001", "TASK-BE-001"],
+        "related_assumption_ids": [],
+        "source_chunk_ids": [
+          "11111111-1111-1111-1111-111111111111:9"
+        ],
+        "source_sections": ["3.1"],
+        "traceability_score": 0.85,
+        "details": {
+          "purpose": "Coordinate the validated provider handoff.",
+          "responsibilities": ["Prepare validated details", "Invoke the provider adapter"],
+          "dependencies": ["Email Provider adapter"],
+          "public_interfaces": ["Provider handoff boundary"]
+        }
+      },
+      {
+        "recommendation_id": "ARCH-AUTH-001",
+        "recommendation_type": "authentication_authorization",
+        "title": "Identity and access decision",
+        "recommendation": "Needs clarification: authentication and authorization requirements are not specified.",
+        "confidence": 0.72,
+        "reason": "No actor authentication, protected interface, role, or access policy is present in the cited requirement.",
+        "provenance": "needs_clarification",
+        "evidence_text": null,
+        "related_requirement_ids": ["INT-001"],
+        "related_artifact_ids": ["Q-001"],
+        "related_assumption_ids": [],
+        "source_chunk_ids": [
+          "11111111-1111-1111-1111-111111111111:9"
+        ],
+        "source_sections": ["3.1"],
+        "traceability_score": 0.55,
+        "details": {
+          "clarification_question": "Which actors or systems must authenticate before initiating the provider handoff?"
+        }
+      }
+    ],
+    "diagrams": [
+      {
+        "diagram_id": "DIAG-CONTEXT-001",
+        "diagram_type": "system_context",
+        "title": "System context",
+        "mermaid": "flowchart LR\n  User[Workflow participant] --> SpecBridgeSystem[Registration system]\n  SpecBridgeSystem --> EmailProvider[Email Provider]",
+        "confidence": 0.86,
+        "reason": "Shows only the actor, system, and external integration supported by the blueprint.",
+        "provenance": "ai_recommendation",
+        "related_requirement_ids": ["INT-001"],
+        "related_artifact_ids": ["ENG-SUM-001"],
+        "related_assumption_ids": [],
+        "source_chunk_ids": [
+          "11111111-1111-1111-1111-111111111111:9"
+        ],
+        "source_sections": ["3.1"],
+        "traceability_score": 0.85
+      },
+      {
+        "diagram_id": "DIAG-SEQUENCE-001",
+        "diagram_type": "sequence",
+        "title": "Provider handoff sequence",
+        "mermaid": "sequenceDiagram\n  participant Registration\n  participant ProviderAdapter\n  participant EmailProvider\n  Registration->>ProviderAdapter: Send validated details\n  ProviderAdapter->>EmailProvider: Provider request",
+        "confidence": 0.84,
+        "reason": "Visualizes the explicit provider handoff without inventing failure behavior.",
+        "provenance": "ai_recommendation",
+        "related_requirement_ids": ["INT-001"],
+        "related_artifact_ids": ["ENG-SUM-001", "TASK-INT-001"],
+        "related_assumption_ids": [],
+        "source_chunk_ids": [
+          "11111111-1111-1111-1111-111111111111:9"
+        ],
+        "source_sections": ["3.1"],
+        "traceability_score": 0.85
+      }
+    ]
+  },
+  "total_recommendations": 14,
+  "total_diagrams": 5,
+  "clarification_recommendations": 1,
+  "cached": false,
+  "model": "gpt-5.5",
+  "agent_version": "1",
+  "source_fingerprint": "example-architecture-blueprint-fingerprint",
+  "execution_time_ms": 1672.3,
+  "generated_at": "2026-06-21T00:00:00Z",
+  "knowledge_graph_updated": true
+}

@@ -1,0 +1,5 @@
+requirement_id,title,priority
+REQ-001,Upload supported documents,High
+REQ-002,Extract normalized text,High
+REQ-003,Store validated originals,Medium
+
